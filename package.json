@@ -1,0 +1,25 @@
+{
+  "name": "srldl-edit-table",
+  "version": "1.0.0",
+  "description": "Make tables based on dataTable editable",
+  "main": "./js/edit-table.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srldl/edit-table.git"
+  },
+  "keywords": [
+    "edit",
+    "dataTable",
+    "Excel",
+    "replacement"
+  ],
+  "author": "srldl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/srldl/edit-table/issues"
+  },
+  "homepage": "https://github.com/srldl/edit-table#readme"
+}
