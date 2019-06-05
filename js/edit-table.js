@@ -10,7 +10,6 @@ require('datatables.net-keytable')( window, $ );
 
 
 exports.insertTable = function(obj) {
-
   var currentFocus;
 
 //Get the buttons
@@ -281,7 +280,7 @@ for (let j of obj.dataRows) {
                    rowArr.push(sel_row[i+1].replace(/_[0-9]+\"/g, "_"+index_count+'"'));
                 };
               //Id should not have id or be editable
-               rowArr[rowArr.length-1] = obj.id + "-" + index_count;
+               rowArr[rowArr.length-1] = obj.id + '-' + (parseInt(index_count) +1);
                rowNode = table.row.add( rowArr ).draw().node();
                rowNode.id = "row_"+index_count;
                increment_index_count();
@@ -322,7 +321,7 @@ for (let j of obj.dataRows) {
          };
 
          obj.saveJson = saveJson;
-         return obj.saveJson;
+         return false;
       } );
 
 
@@ -338,7 +337,7 @@ for (let j of obj.dataRows) {
                   rowArr.push(checkHtmlComponent('',i));
                 });
               //Id should not be editable
-               rowArr[rowArr.length-1] = obj.id + "-" + index_count;;
+               rowArr[rowArr.length-1] = obj.id + '-' +  (parseInt(index_count) +1);
                let rowNode = table.row.add( rowArr ).draw().node();
                //Add row id to TR element
                rowNode.id = "row_"+index_count;
