@@ -9,7 +9,7 @@ require('datatables.net-autofill')( window, $ );
 require('datatables.net-keytable')( window, $ );
 
 
-exports.insertTable = function(obj) {
+exports.insertTable = function(obj, callback) {
   var currentFocus;
 
 //Get the buttons
@@ -320,8 +320,8 @@ for (let j of obj.dataRows) {
             saveJson.push(saveRow);
          };
 
-         obj.saveJson = saveJson;
-         return false;
+         //obj.saveJson = saveJson;
+         callback(saveJson);
       } );
 
 
@@ -389,5 +389,6 @@ for (let j of obj.dataRows) {
           }
 
 });
+
 
 } // function
