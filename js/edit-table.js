@@ -61,7 +61,7 @@ var checkHtmlComponent = (text,k) => {
       return implement_select(k,index_count,text);
   } else
    if (obj.dateFields.includes(k)) {
-      return '<td id="'+ k +'_'+(index_count).toString()+'"><input type="date" id="'+ k +'_'+(index_count).toString()+'" class="dateelement" name="'+ k +'_'+(index_count).toString() +'" value="'+ text+'"></td>';
+      return '<td id="'+ k +'_'+(index_count).toString()+'"><input type="date" id="'+ k +'_'+(index_count).toString()+'" class="dateelement" name="'+ k +'_'+(index_count).toString() +'" value="'+ (text.substring(0, 10)) +'"></td>';
   } else if (obj.autocompletes.includes(k)){
       return '<td id="'+ k +'_'+(index_count).toString()+'"><div class="autocomplete"><input type="text" id="'+ k +'_'+(index_count).toString()+'" name="'+ k +'_'+(index_count).toString() +'" value="'+ text+'"></div></td>';
   } else {
@@ -301,14 +301,18 @@ for (let j of obj.dataRows) {
          for (let i=0;i<nodes.length;i++){
             saveRow = {};
             for (let j=1;j<nodes[i].childNodes.length;j++){
-
                switch(nodes[i].childNodes[j].childNodes[0].nodeName){
                  case 'SELECT':
                     let ind = nodes[i].childNodes[j].childNodes[0].selectedIndex;
                     saveRow[obj.headers[j-1]] = nodes[i].childNodes[j].childNodes[0][ind].value;
                     break;
                  case 'INPUT':
-                    saveRow[obj.headers[j-1]] =  nodes[i].childNodes[j].childNodes[0].value;
+                    //if date, change format to iso6801 before saving
+                    if (nodes[i].childNodes[j].childNodes[0].type == "date"){
+                      saveRow[obj.headers[j-1]] =  nodes[i].childNodes[j].childNodes[0].value + 'T12:00:00Z';
+                    } else {  //Text
+                      saveRow[obj.headers[j-1]] =  nodes[i].childNodes[j].childNodes[0].value;
+                    }
                     break;
                  case 'DIV':
                     saveRow[obj.headers[j-1]] =  nodes[i].childNodes[j].childNodes[0].childNodes[0].value;
@@ -316,11 +320,14 @@ for (let j of obj.dataRows) {
                  default: //#text:
                     saveRow[obj.headers[j-1]] =   nodes[i].childNodes[j].childNodes[0].data;
                }
+               //Avoid the . needed to set the cursor to be stored
+               //(saveRow[obj.headers[j-1]]).replace(/\/ /g,"");
+               //saveRow[obj.headers[j-1]] === " ") {saveRow[obj.headers[j-1]] = "" };
             }
             saveJson.push(saveRow);
          };
 
-         //obj.saveJson = saveJson;
+         obj.saveJson = saveJson;
          callback(saveJson);
       } );
 
