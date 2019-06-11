@@ -6,7 +6,8 @@ Create a package for dataTable testing
 
 Download and install:
 
-> npm install github.com/srldl/edit-tabletest
+```javascript
+npm install github.com/srldl/edit-tabletest
 
 
 
