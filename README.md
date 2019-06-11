@@ -52,7 +52,6 @@ let obj =  {  "dataRows": [{"project":"A","subproject":"AA","event_date":"2019-0
               "selectlist": {"project":["A","B","C"]},
               "autocompletes": ["subproject"],
               "dateFields":["event_date"],
-              "saveJson":[],
               "id": "exceltable"
           };
 
@@ -66,7 +65,6 @@ let obj =  {  "dataRows": [{"project":"A","subproject":"AA","event_date":"2019-0
   - selectlist: 1) Column headers where selectlist should be created and 2) the select list alternatives.
   - autocompletes: Column headers where autocomplete should be offered. Options for autocomplete is the unique names previously written in the same column.
   - dataFields: Column headers to be interpreted as a date field.
-  - saveJson: The return object.
   - id: table id name. Each row id will be called <table id>-<num> where num is a running number starting from 1,
     f.ex. "exceltable-1". 
   
@@ -75,7 +73,7 @@ let obj =  {  "dataRows": [{"project":"A","subproject":"AA","event_date":"2019-0
   
   - Multiple rows can be created and copied. Use "Add rows" to add multiple new or coped rows.
   - Only one row can be deleted at a time.
-  - Dates are in the format of ISO6801, but since the html 5 <input type="date">, the time is always set to 12 noon f.ex.   "2019-06-14T12:00:00Z"
+  - Dates must be in the format of ISO6801, but since the html 5 <input type="date">, the time is always set to 12 noon f.ex.   "2019-06-14T12:00:00Z"
   
   
   
