@@ -21,15 +21,14 @@ function saveToDb(jsonObj){
 }
 
 //Create object with input parameters
-let obj =
-                          { "dataRows": dataRows,
-                            "headers": headers,
-                            "selectlist": {"project":["ABC","DEF"]},
-                            "autocompletes": autocompletesInternal,
-                            "dateFields":dateFields,
-                            "saveJson":[],
-                            "id": id
-                          };
+let obj =  {  "dataRows": dataRows,
+              "headers": headers,
+              "selectlist": {"project":["ABC","DEF"]},
+              "autocompletes": autocompletesInternal,
+              "dateFields":dateFields,
+              "saveJson":[],
+              "id": id
+          };
 
  //Call edit-tabletest with callback handled in saveDB
  tb.insertTable( obj, saveToDb);
