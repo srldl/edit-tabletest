@@ -44,14 +44,16 @@ function saveToDb(jsonObj){
     console.log(jsonObj);
 }
 
+
 //Create object with input parameters
-let obj =  {  "dataRows": dataRows,
-              "headers": headers,
-              "selectlist": {"project":["ABC","DEF"]},
-              "autocompletes": autocompletesInternal,
-              "dateFields":dateFields,
+let obj =  {  "dataRows": [{"project":"A","subproject":"AA","event_date":"2019-06-14T12:00:00Z"},
+			   {"project":"B","subproject":"BB", event_date":"2019-06-14T12:00:00Z"}],
+              "headers": ["project", "subproject", "event_date"],
+              "selectlist": {"project":["A","B","C"]},
+              "autocompletes": ["subproject"],
+              "dateFields":["event_date"],
               "saveJson":[],
-              "id": id
+              "id": "exceltable"
           };
 
  //Call edit-tabletest with callback handled in saveDB
@@ -66,7 +68,7 @@ let obj =  {  "dataRows": dataRows,
   - dataFields: Column headers to be interpreted as a date field.
   - saveJson: The return object.
   - id: table id name. Each row id will be called <table id>-<num> where num is a running number starting from 1,
-    f.ex. "table-1". 
+    f.ex. "exceltable-1". 
   
   
   
