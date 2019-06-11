@@ -315,12 +315,12 @@ for (let j of obj.dataRows) {
                             } else {  //Date set, add time
                                  saveRow[obj.headers[j-1]] = nodes[i].childNodes[j].childNodes[0].value + 'T12:00:00Z';
                             }
-                      } else {   //string input
-                           saveRow[obj.headers[j-1]] =  nodes[i].childNodes[j].childNodes[0].value;
+                      } else {   //string input -remove space chars before and after
+                           saveRow[obj.headers[j-1]] =  nodes[i].childNodes[j].childNodes[0].value.trim();
                       }
                       break;
                  case 'DIV':
-                    saveRow[obj.headers[j-1]] =  nodes[i].childNodes[j].childNodes[0].childNodes[0].value;
+                    saveRow[obj.headers[j-1]] =  nodes[i].childNodes[j].childNodes[0].childNodes[0].value.trim();
                     break;
                  default: //#text:
                     saveRow[obj.headers[j-1]] =   nodes[i].childNodes[j].childNodes[0].data;

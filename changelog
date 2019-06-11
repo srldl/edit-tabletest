@@ -1,2 +1,4 @@
 2.0.2
 -Fixed error for dates. Dates can now be saved in iso6801 format.
+-A space is added to input fields as a cursor placeholder. Spaces
+are now trimmed from both sides of strings returned input.
