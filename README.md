@@ -65,9 +65,8 @@ let obj =  {  "dataRows": [{"project":"A","subproject":"AA","event_date":"2019-0
   - autocompletes: Column headers where autocomplete should be offered. Options for autocomplete is the unique names previously written in the same column.
   - dataFields: Column headers to be interpreted as a date field.
   - id: table id name. Each row id will be called <table id>-<num> where num is a running number starting from 1,
-    f.ex. "exceltable-1". 
-  
- 
+    f.ex. "exceltable-1".
+	
 ## Functionality
   * Multiple rows can be created and copied. Use "Add rows" to add multiple new or copied rows.
   * Only one row can be deleted at a time.
