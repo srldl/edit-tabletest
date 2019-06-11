@@ -56,7 +56,7 @@ let obj =  {  "dataRows": [{"project":"A","subproject":"AA","event_date":"2019-0
               "id": "exceltable"
           };
 
- //Call edit-tabletest with callback handled in saveDB
+ //Call edit-tabletest with callback handled in saveToDB
  tb.insertTable( obj, saveToDb);
   
 ```
