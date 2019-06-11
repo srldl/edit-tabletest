@@ -309,12 +309,15 @@ for (let j of obj.dataRows) {
                  case 'INPUT':
                     //if date, change format to iso6801 before saving since html5 dates does not take care of it.
                     if (nodes[i].childNodes[j].childNodes[0].type == "date"){
-                      //If no date set 
-                      if (nodes[i].childNodes[j].childNodes[0].value.length < 10){
-                           saveRow[obj.headers[j-1]] = null;
-                      } else {  //Date set, add time
-                           saveRow[obj.headers[j-1]] = nodes[i].childNodes[j].childNodes[0].value + 'T12:00:00Z';
-                      }}
+                            //If no date set
+                            if (nodes[i].childNodes[j].childNodes[0].value.length < 10){
+                                 saveRow[obj.headers[j-1]] = null;
+                            } else {  //Date set, add time
+                                 saveRow[obj.headers[j-1]] = nodes[i].childNodes[j].childNodes[0].value + 'T12:00:00Z';
+                            }
+                      } else {   //string input
+                           saveRow[obj.headers[j-1]] =  nodes[i].childNodes[j].childNodes[0].value;
+                      }
                       break;
                  case 'DIV':
                     saveRow[obj.headers[j-1]] =  nodes[i].childNodes[j].childNodes[0].childNodes[0].value;
