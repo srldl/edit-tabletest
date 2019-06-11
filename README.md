@@ -32,7 +32,7 @@ let obj =
                           };
 
  //Call edit-tabletest with callback handled in saveDB
- tb.insertTable(objbj,saveDb);
+ tb.insertTable( obj, saveDb);
   
   ```
   where
