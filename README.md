@@ -69,7 +69,7 @@ let obj =  {  "dataRows": [{"project":"A","subproject":"AA","event_date":"2019-0
     f.ex. "exceltable-1". 
   
   
-  ## Functionality
+## Functionality
   
   - Multiple rows can be created and copied. Use "Add rows" to add multiple new or copied rows.
   - Only one row can be deleted at a time.
