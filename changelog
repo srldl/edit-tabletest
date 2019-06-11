@@ -1,0 +1,2 @@
+2.0.2
+-Fixed error for dates. Dates can now be saved in iso6801 format.

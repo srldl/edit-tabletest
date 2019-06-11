@@ -19,8 +19,7 @@ const markup = `
 Add rows:<input type="text" name="addRows" id="addRows" size=2 maxlength=2>
 <button type="button" id="delBtn">Delete</button>
 <button type="button" id="saveBtn">Save</button>
-<table id="table1" class="display" width="100%"></table>
-`;
+<table id="table1" class="display" width="100%"></table>`;
 
  document.getElementById("edit_table").innerHTML = markup;
 
@@ -71,11 +70,12 @@ var checkHtmlComponent = (text,k) => {
 }
 
 
-//Read from object and add to rows
+//Read from input object and add to input rows
+console.log(obj.dataRows);
 for (let j of obj.dataRows) {
   rowArr = [""];
   for (let k of obj.headers) {
-     let text = (j[k] == '') ? '&nbsp;' : j[k];
+     let text = ((j[k] == '') || (j[k] == null)) ? '&nbsp;' : j[k];
        rowArr.push(checkHtmlComponent(text,k));
   }
   //Id is the last entry, push directly without editable or id
@@ -307,13 +307,15 @@ for (let j of obj.dataRows) {
                     saveRow[obj.headers[j-1]] = nodes[i].childNodes[j].childNodes[0][ind].value;
                     break;
                  case 'INPUT':
-                    //if date, change format to iso6801 before saving
+                    //if date, change format to iso6801 before saving since html5 dates does not take care of it.
                     if (nodes[i].childNodes[j].childNodes[0].type == "date"){
-                      saveRow[obj.headers[j-1]] =  nodes[i].childNodes[j].childNodes[0].value + 'T12:00:00Z';
-                    } else {  //Text
-                      saveRow[obj.headers[j-1]] =  nodes[i].childNodes[j].childNodes[0].value;
-                    }
-                    break;
+                      //If no date set 
+                      if (nodes[i].childNodes[j].childNodes[0].value.length < 10){
+                           saveRow[obj.headers[j-1]] = null;
+                      } else {  //Date set, add time
+                           saveRow[obj.headers[j-1]] = nodes[i].childNodes[j].childNodes[0].value + 'T12:00:00Z';
+                      }}
+                      break;
                  case 'DIV':
                     saveRow[obj.headers[j-1]] =  nodes[i].childNodes[j].childNodes[0].childNodes[0].value;
                     break;
@@ -321,6 +323,8 @@ for (let j of obj.dataRows) {
                     saveRow[obj.headers[j-1]] =   nodes[i].childNodes[j].childNodes[0].data;
                }
                //Avoid the . needed to set the cursor to be stored
+            //   console.log(saveRow[obj.headers[j-1]]);
+            //   (saveRow[obj.headers[j-1]]).replace(/ /g,"");
                //(saveRow[obj.headers[j-1]]).replace(/\/ /g,"");
                //saveRow[obj.headers[j-1]] === " ") {saveRow[obj.headers[j-1]] = "" };
             }
