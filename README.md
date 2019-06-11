@@ -70,7 +70,7 @@ f.ex. "exceltable-1"
 ## Functionality
 - Multiple rows can be created and copied. Use "Add rows" to add multiple new or copied rows.
 - Only one row can be deleted at a time.
-- Dates must be in the format of ISO6801, but since the html 5 <input type="date">, the time is always set to 12 noon f.ex.   "2019-06-14T12:00:00Z"
+- Dates must be in the format of ISO6801, but since the html 5 input type="date" is used, time is always set to 12 noon f.ex.   "2019-06-14T12:00:00Z"
   
   
   
