@@ -16,6 +16,26 @@ npm install github.com/srldl/edit-tabletest
 
 ## Use
 
+
+ 
+In your html file:
+  
+  ```
+  <head>
+  ....
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/autofill/2.3.3/css/autoFill.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/keytable/2.5.0/css/keyTable.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  
+  <body>
+     <div id="edit_table" style="width: 100%; overflow:auto;"></div>
+  </body>
+  
+  ```
+  
+
 In your javascript file:
 
 ```
@@ -48,24 +68,6 @@ let obj =  {  "dataRows": dataRows,
   - id: table id name. Each row id will be called <table id>-<num> where num is a running number starting from 1,
     f.ex. "table-1". 
   
-  
- 
- In your html file:
-  
-  ```
-  <head>
-  ....
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/autofill/2.3.3/css/autoFill.dataTables.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/keytable/2.5.0/css/keyTable.dataTables.min.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  
-  <body>
-     <div id="edit_table" style="width: 100%; overflow:auto;"></div>
-  </body>
-  
-  ```
   
   
   
