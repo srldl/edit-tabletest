@@ -33,7 +33,7 @@ let obj =  {  "dataRows": dataRows,
  //Call edit-tabletest with callback handled in saveDB
  tb.insertTable( obj, saveToDb);
   
-  ```
+```
   where
   - dataRows: The rows from the database to display (previously saved rows)
   - headers: Column headers
@@ -45,7 +45,6 @@ let obj =  {  "dataRows": dataRows,
     f.ex. "table-1". 
   
   
- 
  
  In your html file:
   
