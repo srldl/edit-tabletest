@@ -32,8 +32,8 @@
     "name": "srldl"
   },
   "repository": {
-      "type": "git",
-      "url": "https://github.com/srldl/edit-tabletest.git"
+    "type": "git",
+    "url": "git+https://github.com/srldl/edit-tabletest.git"
   },
   "bugs": {
     "url": "https://github.com/srldl/edit-tabletest/issues"
@@ -49,14 +49,10 @@
   "license": "MIT",
   "main": "./js/edit-table.js",
   "name": "@srldl/edit-tabletest",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/srldl/edit-tabletest.git"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {
     "datatables.net": "^1.10.19",
     "datatables.net-autofill": "^2.3.3",
