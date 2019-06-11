@@ -41,8 +41,8 @@ let obj =  {  "dataRows": dataRows,
   where
   - dataRows: The rows from the database to display (previously saved rows)
   - headers: Column headers
-  - selectlist: Column header names where there should be a selectlist and the alternatives of the select list.
-  - autocompletes: Column header names where 
+  - selectlist: 1) Column headers where there should be a selectlist and 2) the select list alternatives.
+  - autocompletes: Column header names where autocomplete should be offered. Options for autocomplete is the unique names previously written in the same column.
   - dataFields: Column header names which should be interpreted as a date field.
   - saveJson: The return object.
   - id: table id name. Each row id will be called <table id>-<num> where num is a running number starting from 1,
