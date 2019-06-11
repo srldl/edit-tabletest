@@ -33,13 +33,18 @@ let obj =
                           };
 
   tb.insertTable(objbj,saveDb);
+  
+  ```
+  
+  In your html file:
+  
+  ```
+  <div id="edit_table" style="width: 100%; overflow:auto;"></div>
+  
+  ```
+  
+  
+  
  
-  ```
-  
-  
-  
-  
-  
-  ```
 
 
