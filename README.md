@@ -1,9 +1,9 @@
 # edit-tabletest
 
 
-[[https://github.com/srldl/edit-tabletest/blob/master/img/ecotox.jpg |alt="Screenshot"]]
+![alt text](https://github.com/srldl/edit-tabletest/blob/master/img/ecotox.jpg)
 
-Create a package for a database version of an excel sheet. This code uses DataTables modules which again depends on jquery. It is a tweaked version of editor datatable.
+Create a package for a database version of an excel sheet. The code reuses DataTables modules which again depends on jQuery. Basically another version of editor dataTable.
 
 For DataTables see https://datatables.net/
 
