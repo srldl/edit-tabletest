@@ -63,7 +63,7 @@ let obj =  {  "dataRows": [{"project":"A","subproject":"AA","event_date":"2019-0
   where
   - dataRows: The rows from the database to display (previously saved rows)
   - headers: Column headers
-  - selectlist: 1) Column headers where there should be a selectlist and 2) the select list alternatives.
+  - selectlist: 1) Column headers where selectlist should be created and 2) the select list alternatives.
   - autocompletes: Column headers where autocomplete should be offered. Options for autocomplete is the unique names previously written in the same column.
   - dataFields: Column headers to be interpreted as a date field.
   - saveJson: The return object.
