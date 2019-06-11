@@ -16,7 +16,7 @@ In your javascript file:
 
 ```
 //Return json object where one array is one row
-function saveDb(jsonObj){
+function saveToDb(jsonObj){
     console.log(jsonObj);
 }
 
@@ -32,7 +32,7 @@ let obj =
                           };
 
  //Call edit-tabletest with callback handled in saveDB
- tb.insertTable( obj, saveDb);
+ tb.insertTable( obj, saveToDb);
   
   ```
   where
