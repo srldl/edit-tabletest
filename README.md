@@ -47,10 +47,21 @@ let obj =
   
   
  
-  In your html file:
+ 
+ In your html file:
   
   ```
-  <div id="edit_table" style="width: 100%; overflow:auto;"></div>
+  <head>
+  ....
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/autofill/2.3.3/css/autoFill.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/keytable/2.5.0/css/keyTable.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  
+  <body>
+     <div id="edit_table" style="width: 100%; overflow:auto;"></div>
+  </body>
   
   ```
   
