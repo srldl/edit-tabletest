@@ -1,12 +1,12 @@
 {
   "_args": [
     [
-      "@srldl/edit-tabletest@1.0.1",
+      "@srldl/edit-tabletest@2.0.2",
       "/home/siri/projects/npdc-ecotox"
     ]
   ],
-  "_from": "@srldl/edit-tabletest@1.0.1",
-  "_id": "@srldl/edit-tabletest@1.0.1",
+  "_from": "@srldl/edit-tabletest@2.0.2",
+  "_id": "@srldl/edit-tabletest@2.0.2",
   "_inBundle": false,
   "_integrity": "sha512-4N6LVcgjMGTuUbkoNJkwvG8RVCtWxGEHo8V1IqkU2lB+8l8/wxy6Z+Gpi4Pvek+kLLw6Y8OT267+2L1h2Ib1yw==",
   "_location": "/@srldl/edit-tabletest",
@@ -14,19 +14,19 @@
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "@srldl/edit-tabletest@1.0.1",
+    "raw": "@srldl/edit-tabletest@2.0.2",
     "name": "@srldl/edit-tabletest",
     "escapedName": "@srldl%2fedit-tabletest",
     "scope": "@srldl",
-    "rawSpec": "1.0.1",
+    "rawSpec": "2.0.2",
     "saveSpec": null,
-    "fetchSpec": "1.0.1"
+    "fetchSpec": "2.0.2"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@srldl/edit-tabletest/-/edit-tabletest-1.0.1.tgz",
-  "_spec": "1.0.1",
+  "_resolved": "https://registry.npmjs.org/@srldl/edit-tabletest/-/edit-tabletest-2.0.2.tgz",
+  "_spec": "2.0.2",
   "_where": "/home/siri/projects/npdc-ecotox",
   "author": {
     "name": "srldl"
