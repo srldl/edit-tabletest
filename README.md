@@ -1,5 +1,9 @@
 # edit-tabletest
-Create a package for dataTable testing
+Create a package for a database version of an excel sheet. This code uses DataTables modules which again depends on jquery. It is a tweaked version of editor datatable.
+
+For DataTables see https://datatables.net/
+
+Note: This is a first version and not tested very well at the moment. 
 
 
 ## Install
