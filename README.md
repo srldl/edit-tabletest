@@ -7,7 +7,7 @@ Create a package for a database version of an excel sheet. The code reuses DataT
 
 For DataTables see https://datatables.net/
 
-Note: This is a first version and not tested very well at the moment. 
+Note: This is a first version and some flaws has been found, see issues. 
 
 
 ## Install
