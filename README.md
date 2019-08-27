@@ -81,9 +81,8 @@ f.ex. "exceltable-1"
   
   
  ## Known issues
- - autocomplete goes behind the horizontal slider bar for the last rows.
  
- Also please see issues.
+ Please see issues.
  
  
   
