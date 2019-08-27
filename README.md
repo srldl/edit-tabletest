@@ -1,5 +1,7 @@
 # edit-tabletest
 
+Note- this version is outdated. Check out [Exceldb]( https://github.com/srldl/exceldb) instead.
+
 
 ![alt text](https://github.com/srldl/edit-tabletest/blob/master/img/ecotox.jpg)
 
