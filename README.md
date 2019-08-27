@@ -80,9 +80,10 @@ f.ex. "exceltable-1"
 - Column header names must use letters A-Z, a-z, 0-9 or underscore ("_") or hyphen ("-"). Space is not allowed.
   
   
- ## Known larger issues
- - Search does not work yet.
- - Sometimes the ability to select a row gets stuck. If so, refresh browser.
+ ## Known issues
+ - autocomplete goes behind the horizontal slider bar for the last rows.
+ 
+ Also please see issues.
  
  
   
